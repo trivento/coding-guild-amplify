@@ -3,9 +3,11 @@ import {NextPage} from "next";
 import {Auth} from "aws-amplify";
 import router from "next/router";
 import {LoginForm} from "../../components/login-form";
+import {useAuthContext} from "../../contexts/auth-context";
 
 const LoginPage: NextPage = () => {
     const [errorMessage, setErrorMessage] = React.useState('');
+    const auth = useAuthContext();
 
     const handleSubmit = async (values: any) => {
         // values bevat de username en password uit het formulier.
