@@ -10,11 +10,14 @@ const LoginPage: NextPage = () => {
     const auth = useAuthContext();
 
     const handleSubmit = async (values: any) => {
-        // values bevat de username en password uit het formulier.
-        // gebruik Auth.signIn (Promise) om de gebruiker in te loggen.
-        // gebruik vervolgens router.push('/') (Promise) om de gebruiker vervolgens naar de homepage te brengen
-        // als er een error optreedt bij het inloggen, gebruik je setErrorMessage om deze waarde
-        // te tonen aan de gebruiker.
+        try {
+            const user = ''; // gebruik Auth.signIn (Promise) om de gebruiker aan te melden.
+            auth.setUser(user);
+            await router.push('/');
+        } catch (err) {
+            console.log(err);
+            setErrorMessage((err as Error).message);
+        }
     }
 
     return (
