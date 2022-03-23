@@ -44,7 +44,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({onSubmit, errorMessag
                         onChange={formHandler.onFieldChange}
                     />
                     <Button type="submit" disabled={formHandler.isSubmitting}>{formHandler.isSubmitting &&
-                        <Loader/>} Inloggen</Button>
+                        <Loader/>} Registreren</Button>
                 </Flex>
             </form>
         </Card>
