@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "cgamplify",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "/Users/ronderksen/IdeaProjects/trivento/cg-amplify/amplify/backend/api/cgamplify/schema.graphql",
+    "defaultAuthType": {
+      "mode": "AMAZON_COGNITO_USER_POOLS",
+      "cognitoUserPoolId": "authcgamplifybe7a4110"
+    }
+  }
+}
