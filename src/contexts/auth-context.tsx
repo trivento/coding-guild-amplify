@@ -12,9 +12,7 @@ export const AuthProvider: React.FC = ({ children }) => {
 
     React.useEffect(() => {
         try {
-            Auth.currentAuthenticatedUser().then(currentUser => {
-                setUser(currentUser.attributes.email);
-            })
+            // TODO: ingelogde user ophalen en in de state opslaan met setUser
         } catch (err) {
             console.log(err);
             setUser(null);
