@@ -3,70 +3,80 @@
 // this is an auto generated file. This will be overwritten
 
 export const onCreateBlog = /* GraphQL */ `
-  subscription OnCreateBlog {
-    onCreateBlog {
+  subscription OnCreateBlog($owner: String) {
+    onCreateBlog(owner: $owner) {
       id
       name
       posts {
         items {
           id
           title
+          body
           createdAt
           updatedAt
           blogPostsId
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onUpdateBlog = /* GraphQL */ `
-  subscription OnUpdateBlog {
-    onUpdateBlog {
+  subscription OnUpdateBlog($owner: String) {
+    onUpdateBlog(owner: $owner) {
       id
       name
       posts {
         items {
           id
           title
+          body
           createdAt
           updatedAt
           blogPostsId
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onDeleteBlog = /* GraphQL */ `
-  subscription OnDeleteBlog {
-    onDeleteBlog {
+  subscription OnDeleteBlog($owner: String) {
+    onDeleteBlog(owner: $owner) {
       id
       name
       posts {
         items {
           id
           title
+          body
           createdAt
           updatedAt
           blogPostsId
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onCreatePost = /* GraphQL */ `
-  subscription OnCreatePost {
-    onCreatePost {
+  subscription OnCreatePost($owner: String) {
+    onCreatePost(owner: $owner) {
       id
       title
+      body
       blog {
         id
         name
@@ -75,6 +85,7 @@ export const onCreatePost = /* GraphQL */ `
         }
         createdAt
         updatedAt
+        owner
       }
       comments {
         items {
@@ -83,20 +94,23 @@ export const onCreatePost = /* GraphQL */ `
           createdAt
           updatedAt
           postCommentsId
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
       blogPostsId
+      owner
     }
   }
 `;
 export const onUpdatePost = /* GraphQL */ `
-  subscription OnUpdatePost {
-    onUpdatePost {
+  subscription OnUpdatePost($owner: String) {
+    onUpdatePost(owner: $owner) {
       id
       title
+      body
       blog {
         id
         name
@@ -105,6 +119,7 @@ export const onUpdatePost = /* GraphQL */ `
         }
         createdAt
         updatedAt
+        owner
       }
       comments {
         items {
@@ -113,20 +128,23 @@ export const onUpdatePost = /* GraphQL */ `
           createdAt
           updatedAt
           postCommentsId
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
       blogPostsId
+      owner
     }
   }
 `;
 export const onDeletePost = /* GraphQL */ `
-  subscription OnDeletePost {
-    onDeletePost {
+  subscription OnDeletePost($owner: String) {
+    onDeletePost(owner: $owner) {
       id
       title
+      body
       blog {
         id
         name
@@ -135,6 +153,7 @@ export const onDeletePost = /* GraphQL */ `
         }
         createdAt
         updatedAt
+        owner
       }
       comments {
         items {
@@ -143,27 +162,31 @@ export const onDeletePost = /* GraphQL */ `
           createdAt
           updatedAt
           postCommentsId
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
       blogPostsId
+      owner
     }
   }
 `;
 export const onCreateComment = /* GraphQL */ `
-  subscription OnCreateComment {
-    onCreateComment {
+  subscription OnCreateComment($owner: String) {
+    onCreateComment(owner: $owner) {
       id
       post {
         id
         title
+        body
         blog {
           id
           name
           createdAt
           updatedAt
+          owner
         }
         comments {
           nextToken
@@ -171,26 +194,30 @@ export const onCreateComment = /* GraphQL */ `
         createdAt
         updatedAt
         blogPostsId
+        owner
       }
       content
       createdAt
       updatedAt
       postCommentsId
+      owner
     }
   }
 `;
 export const onUpdateComment = /* GraphQL */ `
-  subscription OnUpdateComment {
-    onUpdateComment {
+  subscription OnUpdateComment($owner: String) {
+    onUpdateComment(owner: $owner) {
       id
       post {
         id
         title
+        body
         blog {
           id
           name
           createdAt
           updatedAt
+          owner
         }
         comments {
           nextToken
@@ -198,26 +225,30 @@ export const onUpdateComment = /* GraphQL */ `
         createdAt
         updatedAt
         blogPostsId
+        owner
       }
       content
       createdAt
       updatedAt
       postCommentsId
+      owner
     }
   }
 `;
 export const onDeleteComment = /* GraphQL */ `
-  subscription OnDeleteComment {
-    onDeleteComment {
+  subscription OnDeleteComment($owner: String) {
+    onDeleteComment(owner: $owner) {
       id
       post {
         id
         title
+        body
         blog {
           id
           name
           createdAt
           updatedAt
+          owner
         }
         comments {
           nextToken
@@ -225,11 +256,13 @@ export const onDeleteComment = /* GraphQL */ `
         createdAt
         updatedAt
         blogPostsId
+        owner
       }
       content
       createdAt
       updatedAt
       postCommentsId
+      owner
     }
   }
 `;

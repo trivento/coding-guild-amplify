@@ -14,14 +14,17 @@ export const createBlog = /* GraphQL */ `
         items {
           id
           title
+          body
           createdAt
           updatedAt
           blogPostsId
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -37,14 +40,17 @@ export const updateBlog = /* GraphQL */ `
         items {
           id
           title
+          body
           createdAt
           updatedAt
           blogPostsId
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -60,14 +66,17 @@ export const deleteBlog = /* GraphQL */ `
         items {
           id
           title
+          body
           createdAt
           updatedAt
           blogPostsId
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -79,6 +88,7 @@ export const createPost = /* GraphQL */ `
     createPost(input: $input, condition: $condition) {
       id
       title
+      body
       blog {
         id
         name
@@ -87,6 +97,7 @@ export const createPost = /* GraphQL */ `
         }
         createdAt
         updatedAt
+        owner
       }
       comments {
         items {
@@ -95,12 +106,14 @@ export const createPost = /* GraphQL */ `
           createdAt
           updatedAt
           postCommentsId
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
       blogPostsId
+      owner
     }
   }
 `;
@@ -112,6 +125,7 @@ export const updatePost = /* GraphQL */ `
     updatePost(input: $input, condition: $condition) {
       id
       title
+      body
       blog {
         id
         name
@@ -120,6 +134,7 @@ export const updatePost = /* GraphQL */ `
         }
         createdAt
         updatedAt
+        owner
       }
       comments {
         items {
@@ -128,12 +143,14 @@ export const updatePost = /* GraphQL */ `
           createdAt
           updatedAt
           postCommentsId
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
       blogPostsId
+      owner
     }
   }
 `;
@@ -145,6 +162,7 @@ export const deletePost = /* GraphQL */ `
     deletePost(input: $input, condition: $condition) {
       id
       title
+      body
       blog {
         id
         name
@@ -153,6 +171,7 @@ export const deletePost = /* GraphQL */ `
         }
         createdAt
         updatedAt
+        owner
       }
       comments {
         items {
@@ -161,12 +180,14 @@ export const deletePost = /* GraphQL */ `
           createdAt
           updatedAt
           postCommentsId
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
       blogPostsId
+      owner
     }
   }
 `;
@@ -180,11 +201,13 @@ export const createComment = /* GraphQL */ `
       post {
         id
         title
+        body
         blog {
           id
           name
           createdAt
           updatedAt
+          owner
         }
         comments {
           nextToken
@@ -192,11 +215,13 @@ export const createComment = /* GraphQL */ `
         createdAt
         updatedAt
         blogPostsId
+        owner
       }
       content
       createdAt
       updatedAt
       postCommentsId
+      owner
     }
   }
 `;
@@ -210,11 +235,13 @@ export const updateComment = /* GraphQL */ `
       post {
         id
         title
+        body
         blog {
           id
           name
           createdAt
           updatedAt
+          owner
         }
         comments {
           nextToken
@@ -222,11 +249,13 @@ export const updateComment = /* GraphQL */ `
         createdAt
         updatedAt
         blogPostsId
+        owner
       }
       content
       createdAt
       updatedAt
       postCommentsId
+      owner
     }
   }
 `;
@@ -240,11 +269,13 @@ export const deleteComment = /* GraphQL */ `
       post {
         id
         title
+        body
         blog {
           id
           name
           createdAt
           updatedAt
+          owner
         }
         comments {
           nextToken
@@ -252,11 +283,13 @@ export const deleteComment = /* GraphQL */ `
         createdAt
         updatedAt
         blogPostsId
+        owner
       }
       content
       createdAt
       updatedAt
       postCommentsId
+      owner
     }
   }
 `;

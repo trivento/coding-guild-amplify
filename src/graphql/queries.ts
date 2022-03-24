@@ -11,14 +11,17 @@ export const getBlog = /* GraphQL */ `
         items {
           id
           title
+          body
           createdAt
           updatedAt
           blogPostsId
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -37,6 +40,7 @@ export const listBlogs = /* GraphQL */ `
         }
         createdAt
         updatedAt
+        owner
       }
       nextToken
     }
@@ -47,6 +51,7 @@ export const getPost = /* GraphQL */ `
     getPost(id: $id) {
       id
       title
+      body
       blog {
         id
         name
@@ -55,6 +60,7 @@ export const getPost = /* GraphQL */ `
         }
         createdAt
         updatedAt
+        owner
       }
       comments {
         items {
@@ -63,12 +69,14 @@ export const getPost = /* GraphQL */ `
           createdAt
           updatedAt
           postCommentsId
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
       blogPostsId
+      owner
     }
   }
 `;
@@ -82,11 +90,13 @@ export const listPosts = /* GraphQL */ `
       items {
         id
         title
+        body
         blog {
           id
           name
           createdAt
           updatedAt
+          owner
         }
         comments {
           nextToken
@@ -94,6 +104,7 @@ export const listPosts = /* GraphQL */ `
         createdAt
         updatedAt
         blogPostsId
+        owner
       }
       nextToken
     }
@@ -106,11 +117,13 @@ export const getComment = /* GraphQL */ `
       post {
         id
         title
+        body
         blog {
           id
           name
           createdAt
           updatedAt
+          owner
         }
         comments {
           nextToken
@@ -118,11 +131,13 @@ export const getComment = /* GraphQL */ `
         createdAt
         updatedAt
         blogPostsId
+        owner
       }
       content
       createdAt
       updatedAt
       postCommentsId
+      owner
     }
   }
 `;
@@ -138,14 +153,17 @@ export const listComments = /* GraphQL */ `
         post {
           id
           title
+          body
           createdAt
           updatedAt
           blogPostsId
+          owner
         }
         content
         createdAt
         updatedAt
         postCommentsId
+        owner
       }
       nextToken
     }
