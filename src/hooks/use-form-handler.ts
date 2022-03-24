@@ -13,7 +13,7 @@ export function useFormHandler<Values extends {}>(
 
     const hasError = (fieldName: keyof Errors) => errors[fieldName] && errors[fieldName] !== '';
 
-    const onFieldChange = React.useCallback((event: React.FormEvent<HTMLInputElement>) => {
+    const onFieldChange = React.useCallback((event: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const fieldName = event.currentTarget.name;
         const value = event.currentTarget.value;
         setValues((prevValues: Values) => ({
