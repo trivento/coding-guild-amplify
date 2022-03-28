@@ -4,7 +4,6 @@ type Blog
     rules: [
         {allow: owner, operations: [read, create, update, delete]},
         {allow: private, operations: [read, create, update, delete]},
-        {allow: public, operations: [read]}
     ])
 {
     id: ID!
@@ -18,7 +17,6 @@ type Post
     rules: [
         {allow: owner, operations: [read, create, update, delete]},
         {allow: private, operations: [read, create, update, delete]},
-        {allow: public, operations: [read]}
     ])
 {
     id: ID!
@@ -34,7 +32,6 @@ type Comment
     rules:[
         {allow: owner, operations: [read, create, update, delete]},
         {allow: private, operations: [read, create, update, delete]},
-        {allow: public, operations: [read]}
     ])
 {
     id: ID!
