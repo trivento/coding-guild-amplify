@@ -11,7 +11,7 @@ const LoginPage: NextPage = () => {
 
     const handleSubmit = async (values: any) => {
         try {
-            const user = ''; // TODO: gebruik Auth.signIn (Promise) om de gebruiker aan te melden.
+            const user = values.username; // TODO: gebruik Auth.signIn (Promise) om de gebruiker aan te melden.
             auth.setUser(user);
             await router.push('/');
         } catch (err) {

@@ -20,7 +20,16 @@ const Home: NextPage<PageProps> = ({posts, postsError}) => {
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
     const SSR = withSSRContext(ctx);
     const props: PageProps = {
-        posts: [],
+        posts: [
+            {
+                id: '1',
+                title: 'A post',
+            },
+            {
+                id: '2',
+                title: 'Another post'
+            }
+        ],
     }
     try {
         // TODO: retrieve the posts

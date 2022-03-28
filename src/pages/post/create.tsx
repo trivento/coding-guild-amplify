@@ -24,7 +24,7 @@ const PostFormPage: NextPage<PageProps> = ({ blogsPostId, blogsError }) => {
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
     const SSR = withSSRContext(ctx);
     const props: PageProps = {
-        blogsPostId: ''
+        blogsPostId: '1'
     }
     try {
         // TODO: haal de blogs op en gebruik de eerste om het blogsPostId te vullen

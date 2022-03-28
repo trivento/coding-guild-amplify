@@ -11,6 +11,7 @@ export const PageWrapper: React.FC = ({children}) => {
 
     const signOut = async () => {
         // TODO: implementeer sign out
+        auth.setUser(null);
         await router.push("/");
     }
 
@@ -22,6 +23,7 @@ export const PageWrapper: React.FC = ({children}) => {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <header>
+                <h1><Link href={"/"}>Coding Guild Blog</Link></h1>
                 {auth.isLoggedIn
                     ? <div>
                         <Text>Ingelogd als: {auth.user}</Text>
