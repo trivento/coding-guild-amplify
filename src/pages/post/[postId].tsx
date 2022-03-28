@@ -36,7 +36,11 @@ const PostPage: NextPage<PageProps> = ({ post, postError }) => {
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext<{ postId: string }>) {
     const props: PageProps = {
-        post: null,
+        post: {
+            id: '1',
+            title: 'A Post',
+            body: 'About nothing.'
+        },
     }
     const SSR = withSSRContext(ctx);
 
